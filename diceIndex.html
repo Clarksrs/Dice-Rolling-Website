@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+table,th,td{
+table-layout:fixed;
+width:100%;
+border: 3px white;
+border-style: solid;
+color:white;
+font-family:'Courier New', Courier, monospace;
+text-align: center;
+font-size: xx-large;
+}
+
+body{
+    background-color: red;
+}
+
+button {
+  background-color: #414141;
+  border: none;
+  color: white;
+  padding: 20px;
+  margin:10px
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  width:100%;
+}
+
+button:active {
+  transform: translateY(4px);
+}
+
+button:hover {
+  background-color: #000000;
+  color: white;
+}
+
+</style>
+<body>
+<!--Table Start-->
+<table>
+    <caption><h1>Javascript Dice()</h1></caption>
+    <tbody>
+       <tr>
+        <td><button onclick="getElementById('d2Result').innerHTML = rollDice(1,2)">Roll d2</button></td>
+        <td><p id="d2Result">2</p></td>
+      </tr>
+      <tr>
+        <td><button onclick="getElementById('d3Result').innerHTML = rollDice(1,3)">Roll d3</button></td>
+        <td><p id="d3Result">3</p></td>
+      </tr>
+      <tr>
+        <td><button onclick="getElementById('d4Result').innerHTML = rollDice(1,4)">Roll d4</button></td>
+        <td><p id="d4Result">4</p></td>
+      </tr>
+      <tr>
+        <td><button onclick="getElementById('d6Result').innerHTML = rollDice(1,6)">Roll d6</button></td>
+        <td id="d6Result">6</td>
+      </tr>
+      <tr>
+        <td><button onclick="getElementById('d8Result').innerHTML = rollDice(1,8)">Roll d8</button></td>
+        <td id="d8Result">8</td>
+      </tr>
+      <tr>
+        <td><button onclick="getElementById('d10Result').innerHTML = rollDice(1,10)">Roll d10</button></td>
+        <td id="d10Result">10</td>
+      </tr>
+      <tr>
+        <td><button onclick="getElementById('d12Result').innerHTML = rollDice(1,12)">Roll d12</button></td>
+        <td id="d12Result">12</td>
+      </tr>
+      <tr>
+        <td><button onclick="getElementById('d20Result').innerHTML = rollDice(1,20)">Roll d20</button></td>
+        <td id="d20Result">20</td>
+      </tr>
+      <tr>
+        <td><button onclick="getElementById('d100Result').innerHTML = rollDice(1,100")>Roll d100</button></td>
+        <td id="d100Result">100</td>
+      </tr>
+  </table>
+
+<script>
+function rollDice(min, max) {
+  return min + Math.floor(Math.random() * (max-min + 1))
+}
+</script>
+
+</body>
+</html>
